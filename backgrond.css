@@ -1,0 +1,305 @@
+/*
+initial
+de esta forma le digo que el h2 solo va a tener el valor inicial es decir medium pero esto va con las herencias primero digo que los h2 tienen sierto valor de borde pero despues le digo que el div que tiene el id sidebar los h2 solo van a tener el valor inicial que se declaro anteriormente, ojo es con la herencia que esto funciona ya que los h2 que estan fuera del div padre no tienen ningun efecto, no estoy muy seguro pero creo que qiere decir que tomara el valor inicial de esta propiedad del navegador*/
+h2 { border: medium solid green } 
+#sidebar h2 { border-color: initial; }
+/* 
+inherit
+se usa para obligar a los hijos tomar el el mismo valor de la cierta propiedad del padre como en este caso el padre es la clase uno y este tiene un borde a su alrededor pero solo en su div el hijo no lo tiene ya que estas cosas no se heredan, entonces al colocar la misma propiedad en un div hijo y le coloco inherit le estoy diciendo que tome el mismo valor que tiene esta propiedad pero en el padre */
+.uno{
+    border-style: dashed;
+}
+.dos{
+    border-style: inherit;
+    border-style: un
+}
+
+/* 
+unset
+Actúa como heredado o inicial. Actuará como heredado si el padre tiene un valor que coincide, o de lo contrario actuará como inicial */
+.bar {
+    border: 1px solid green;
+}
+  
+.parrafo {
+    border: 1px solid red;
+}
+  
+.bar .parrafo {
+    border-color: unset;
+}
+
+    /* inherit : obtener la propiedad del elemento padre.
+    initial : el valor predeterminado para la propiedad (el valor predeterminado del navegador).
+    unset : Actúa como heredado o inicial. Actuará como heredado si el padre tiene un valor que coincide, o de lo contrario actuará como inicial.} */
+
+
+
+
+
+/* al .background solo se le puede dar despues sus diferentes propiedades en modo valor de la propiedad es para colocar fondos, se le pueden colocar toas las propiedades del background en una solo linea si se desea*/
+.background{
+    background: darkturquoise;
+    color: brown;
+}
+
+
+
+/* 
+background-attachment
+Controla si la imagen de fondo se mueve o permanece fija cuando se hace scroll en la ventana del navegador tiene 6 valores los tres de initial, inherit y unset, y los mas usados son scroll fixed y local*/
+
+/* scroll es el que trae por defecto y el fondo se mueve junto con el scroll, es decir, que al hacer scroll la imagen va a estar hay en el mismo sitio */
+.background-uno{
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-attachment: scroll; 
+}
+
+/* este hace un gran efecto ya que la imagen esta fija y al hacer scroll el contenido no se mueve con la imagen, es decir, que al hacer scroll el contenido se mueve entre la imagen, ya que la imagen esta fija, el contenido pasa por cada sitio de la imagen */
+.background-dos{
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-attachment: fixed; 
+}
+
+/* no veo la diferencia con el scroll */
+.background-tres{
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-attachment: local; 
+}
+
+/* background-color 
+	Establece el color de fondo de un elemento, solo acepta uno de estos valores transparent o un color en las diferentes formas ay inherit estos valores creo que estan en todos lados initial inherit o unset, por defecto es transparent*/
+.background-cuatro{
+    background-color: transparent;
+}
+.background-cinco{
+    background-color: yellow;
+}
+
+/*background-image 
+	Establece la imagen de fondo de un elemento, los tres valores de siempre pero los que valen son url y none,  none es para ninguno no salga nada
+*/
+.background-seis{
+    background-image:none;
+}
+.background-siete{
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+}
+
+/* background-position
+   Controla la posición de las imágenes de fondo, se puede controlar por medida es decir pixeles y los demas, por porcentajes o por alfuna posición left-center-right
+   o top-center-bottom, se pueden hacer convinaciones con porcentajes o medidas, acepta dos valores el primero es horizontal y el segundo vertical, se puede usar medidas o porcentajes o palabras clave, como rigth center o left o top bottom y center, dos valores x y y se pueden hacer algunas convinaciones
+
+*/
+/* si coloco solo center sobre entiende que en centro centro: ariba y a los lados */
+.background-ocho{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position: center;
+}
+.background-nueve{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position: center center;
+}
+/* la que trae pos defecto arriba y a la izquierda */
+.background-diez{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position: top left;
+}
+/* abajo y ala derecha: se pueden hacer varias convinaciones*/
+.background-once{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position: bottom right;
+}
+/* como no esta el segundo parametro sobre entiende que es la misma cantidad*/
+.background-doce{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position: 10% 50%;
+}
+/* porcentajes y palabras clave, recordar primero horizontal x y luego vertical y */
+.background-trece{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position:right 10%;
+}
+.background-catorce{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position:10% bottom;
+}
+
+/* background-position-x acepta solo un parametro bien puede ser en porcentajes o palabras clave x es horizontal */
+.background-quince{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position-x:center;
+}
+/* background-position-y acepta solo un parametro bien puede ser en porcentajes o palabras clave y es vertical */
+.background-dieciseis{
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');
+    background-position-y: 70%;
+}
+
+/* background-repeat 
+    Controla el tipo de repetición de las imágenes de fondo.sus valores
+    repeat repeat-x repeat-y no-repeat, solo acepta uno, el que trae por defecto es repeat que es para que se repita
+*/
+/* se repite */
+.background-diecisiete{
+    background-repeat:repeat;
+    background-size: 10%;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+/* no se repite */
+.background-dieciocho{
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+/* se repite solo horizontalmente */
+.background-diecinueve{
+    background-repeat: repeat-x;
+    background-size: 10%;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+/* se repite solo verticalmente */
+.background-veinte{
+    background-repeat: repeat-y;
+    background-size: 10%;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+
+/* background-size  ojp que alguno s navegadores presentan problemas con esta propiedad
+especifica el tamaño de las imágenes de fondo. acepta dos volores por defecto es auto auto, se controla por porcentejes o con las plabras clave auto, contain o cover */
+
+/* contain Escala la imagen al mayor tamaño posible sin recortarla ni estirarla. la imagen toma el tamaño de la caja pero no se estira como pra cubrir todo de todo*/
+.background-veintiuno{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+/* cover la imagen no se estira pero si crece los necesario como para cobrir toda la caja. Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío*/
+.background-veintidos{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+
+/* de esta forma puedo hacer deformaciones y hacer de la imagen a mi medida, claro que estara deformada */
+.background-veintitres{
+    background-size:70% 170%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+
+/* auto se acomoda para que la imagen no se deforme */
+.background-veinticuatro{
+    background-size:70% auto;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+
+/* de esta forma le digo que horizontalmente tendra un 70% y verticcalmente un 100% se deforma */
+.background-veinticinco{
+    background-size:70% 100%;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg');  
+}
+
+/*  background-clip pendiente con los navegadores también
+especifica si el fondo de un elemento, ya sea el color o imagen, se extiende por debajo su borde. los valores border-box | padding-box | content-box*/
+
+/* creo que border-box es el por defecto el background cubre asta el final del borde osea todo */
+.background-veintiseis{
+    border: 5px navy;
+    border-style: dotted double;
+    margin: 2em;
+    padding: 2em;
+    background-color: #F8D575;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg'); 
+    background-clip:border-box;
+}
+
+/* cubre asta el padding no toma el borde */
+.background-veintisiete{
+    border: 5px navy;
+    border-style: dotted double;
+    margin: 2em;
+    padding: 2em;
+    background-color: #F8D575;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg'); 
+    background-clip: padding-box;
+}
+
+/* cubre solo el contenido lo demas lo deja sin bacggraund */
+.background-veintiocho{
+    border: 5px navy;
+    border-style: dotted double;
+    margin: 2em;
+    padding: 2em;
+    background-color: #F8D575;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg'); 
+    background-clip: content-box;
+}
+
+/* aquí esta sin nada y no veo diferencia con border-box */
+.background-veintinueve{
+    border: 5px navy;
+    border-style: dotted double;
+    margin: 2em;
+    padding: 2em;
+    background-color: #F8D575;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg'); 
+
+}
+
+/* background-origin 
+La propiedad background-origin especifica el área de origen de un fondo o imagen en determinada caja. para que la propiedad background-position calcule la posición de inicio de un fondo o imagen definida por la propiedad background-image. es donde se va o colocar la imagen como por defecto pero en este caso yo le digo donde nace, los valores es igual a background-clip los valores border-box | padding-box | content-box
+*/
+
+/* nace desde el borde */
+.background-treinta{
+    border:4px dotted #FBE700;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg'); 
+    background-position:0 0;
+    background-origin:border-box;
+    margin-bottom:10px; 
+}
+
+/* no veo la diferencia */
+.background-treintayuno{
+    border:4px dotted #FBE700;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg'), url('img/cristiano-ronaldo-juventus-2018-19_y5hyk3lnsydm12d4nw1a2k9uk.jpg');
+    background-position: 0 0, bottom left;
+    background-origin: padding-box;
+    margin-bottom:10px;
+}
+
+/* no veo la diferencia */
+.background-treintaydos{
+    border:4px dotted #FBE700;
+    background-image: url('img/1531757536_711668_1531757805_noticia_normal.jpg'); 
+    background-origin:content-box;
+}

@@ -1,0 +1,10 @@
+/* all no se para que funciona */
+div { 
+    all:initial;
+    /* all: inherit;
+    all: unset; */
+    }
+p{
+    background-color: yellow; 
+    color: red; 
+}
