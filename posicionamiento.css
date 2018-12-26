@@ -1,0 +1,28 @@
+/* botton 
+Indica el desplazamiento entre el borde inferior del elemento y la parte inferior de su elemento contenedor.  esta propiedad sólo afecta a los elementos cuya propiedad position tenga un valor de relative, absolute o fixed
+*/
+
+.bottom{
+    height: 100px;
+    background-color: blue;    
+}
+/* al color un numero positivo el contenedor sube con respecto al contenedor padre es un top negativo*/
+.hijo-uno{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: red;
+    bottom: 20px;
+}
+/* al color un numero negativo el contenedor baja con respecto al contenedor padre es un top positivo*/
+
+.hijo-dos{
+    left: 60px;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background-color: rgb(44, 121, 145);
+    bottom: -10px;
+}
+/* clear
+Controla el comportamiento de los elementos adyacentes a elementos posicionados de forma flotante */
