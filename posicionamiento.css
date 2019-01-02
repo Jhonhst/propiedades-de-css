@@ -25,4 +25,79 @@ Indica el desplazamiento entre el borde inferior del elemento y la parte inferio
     bottom: -10px;
 }
 /* clear
-Controla el comportamiento de los elementos adyacentes a elementos posicionados de forma flotante */
+Controla el comportamiento de los elementos adyacentes a elementos posicionados de forma flotante, Alguno o todos los siguientes valores y en cualquier orden:
+none,left, right, both,inherit, lo que sucede es que al darle a algun elemento la prpiedad ppor ejemplo float:right ese elemento queda al parecido a un absolute y lo que esta debajo no respeta su borde con la propiedad clear le digo que sea flotante pero que se le respete su cuerpo */
+
+/* de esta manera la imagen se mueve a la derecha pero el parrafo que estaba debajo sube por el otro lado, claro el parrafo no se munta encima de la imagen pero si sube a su alrededor */
+.clear-uno{
+    float: right;
+}
+.clear-dos{
+    float: left; 
+}
+/* de esta manera respeta a los flotantes de la izquierda con right los de la dereecha y con both los de ambas partes */
+.clear-dos-par{
+    clear: left;
+}
+
+/* clip
+    Establece la parte visible de un elemento
+    Alguno o todos los siguientes valores y en cualquier orden: shape auto inherit, se aplica en Elementos posicionados de forma absoluta, se usa la palabra reservada rect(toppx rightpx bottom left); acepta todas las medidas a excepcion del porcentaje esta propiedad sirve para hacer recortes a elementos absolutos
+*/
+/* de esta manera recorta la imagen */
+.img-clip{
+    position: absolute;
+    /* top: 8px;
+    left: 8px;
+    width: 130px;
+    height: 130px; */
+    clip: rect(95px 85px auto 15px);
+}
+
+/* cursor
+La cursorpropiedad especifica el cursor del mouse que se muestra cuando se apunta sobre un elemento.
+alias	The cursor indicates an alias of something is to be created	
+all-scroll	The cursor indicates that something can be scrolled in any direction	
+auto	Default. The browser sets a cursor	
+cell	The cursor indicates that a cell (or set of cells) may be selected	
+context-menu	The cursor indicates that a context-menu is available	
+col-resize	The cursor indicates that the column can be resized horizontally	
+copy	The cursor indicates something is to be copied	
+crosshair	The cursor render as a crosshair	
+default	The default cursor	
+e-resize	The cursor indicates that an edge of a box is to be moved right (east)	
+ew-resize	Indicates a bidirectional resize cursor	
+grab	The cursor indicates that something can be grabbed	
+grabbing	The cursor indicates that something can be grabbed	
+help	The cursor indicates that help is available	
+move	The cursor indicates something is to be moved	
+n-resize	The cursor indicates that an edge of a box is to be moved up (north)	
+ne-resize	The cursor indicates that an edge of a box is to be moved up and right (north/east)	
+nesw-resize	Indicates a bidirectional resize cursor	
+ns-resize	Indicates a bidirectional resize cursor	
+nw-resize	The cursor indicates that an edge of a box is to be moved up and left (north/west)	
+nwse-resize	Indicates a bidirectional resize cursor	
+no-drop	The cursor indicates that the dragged item cannot be dropped here	
+none	No cursor is rendered for the element	
+not-allowed	The cursor indicates that the requested action will not be executed	
+pointer	The cursor is a pointer and indicates a link	
+progress	The cursor indicates that the program is busy (in progress)	
+row-resize	The cursor indicates that the row can be resized vertically	
+s-resize	The cursor indicates that an edge of a box is to be moved down (south)	
+se-resize	The cursor indicates that an edge of a box is to be moved down and right (south/east)	
+sw-resize	The cursor indicates that an edge of a box is to be moved down and left (south/west)	
+text	The cursor indicates text that may be selected	
+URL	A comma separated list of URLs to custom cursors. Note: Always specify a generic cursor at the end of the list, in case none of the URL-defined cursors can be used	
+vertical-text	The cursor indicates vertical-text that may be selected	
+w-resize	The cursor indicates that an edge of a box is to be moved left (west)	
+wait	The cursor indicates that the program is busy	
+zoom-in	The cursor indicates that something can be zoomed in	
+zoom-out	The cursor indicates that something can be zoomed out	
+initial	Sets this property to its default value. Read about initial	
+inherit	Inherits this property from its parent element. Read about inherit	
+*/
+.img-cursor{
+    float: right;
+    cursor:wait ;
+    /* este por ejemplo es para esperar, sale el circulito dando vueltas */
+}
