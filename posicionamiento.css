@@ -101,3 +101,227 @@ inherit	Inherits this property from its parent element. Read about inherit
     cursor:wait ;
     /* este por ejemplo es para esperar, sale el circulito dando vueltas */
 }
+
+/* diplay
+    Establece el tipo de caja generada por un elemento
+    inline, block, inline-block, list-item, run-in, table inline-table table-row-group table-header-group table-footer-group table-row table-column-group table-column table-cell table-caption none inherit
+*/
+/*d- inline lo que hace es que un parrafo por defecto agarra todo el ancho de la caja, entonces al colocarle esta propiedad algun parrafo este solo ocuparia como maximo su propio contenido pero entonces hay que colocarselo a todos los parrafos para que aggare efecto */
+.d-inline{
+    position: relative;
+    top: 20px;
+    clear: both;
+}
+.paraf{
+    display: inline;
+}
+
+/*d- block este hace que sean visibles las cajas y que tomen tomen el ancho de la caja y no de si mismo, por ejemplo las anclas no son como los parrafos que vienen como con display block por defecto si no parecieran que vinieran con display inline en la misma linea pero al darle display block estas toman el 100% de la caja y no el 100% pero de si mismo como vienen normalmente*/
+.dis-block{
+    /* position: relative; */
+    margin-top: 20px;
+}
+.paraf-block{
+    display: block;
+}
+.paraf-block-in{
+    display: inline;
+}
+
+/*d- inline-block, esta lo que es que hace las dos cosas display block y inline a la ves, puede colocar un bloque dentro de una linea hace que un bloque este en la misma linea */
+.d-inline-blok{
+    width: 20%;
+    border: solid red 4px;
+    display: inline-block;
+}
+
+/*d- list-item, esto lo que hace es que convierte cajas o en este caso parrafos en una lista se corre hacia la izquierda para que puedan verse los puntos y las propiedades de las lista se pueden usar aquí,  list-style-type, list-style-image, list-style-position y list-style.*/
+.d-list-item{
+    display: list-item;
+    margin-left: 20px;
+}
+/* d- run in, no entendi bien que es lo que hace, pero creo que hace que los parrafos se hagan caja*/
+.run-in-one{
+    display: run-in; border: 
+    2px dashed #C00;
+}
+.run-in-two{
+    display: block; 
+    border: 2px solid #000;
+}
+.run-in-three{
+    display: run-in; 
+    border: 2px dashed #C00;
+}
+.run-in-four{
+    display: inline; 
+    border: 2px solid #000;
+}
+
+/* el resto ya tiene que ver con las tablas 
+d table-cell, es parecido a la lista pero en tablas, esto lo que hace es convierte las cajas elementos de una tabla como si fueran <td>, los elemento de display tabla no son muy recomendados
+*/
+
+.table-cell{
+    display: table-cell;
+}
+
+#contenedor {
+    display: table;
+    border-spacing: 5px;
+}
+#contenidos {
+  display: table-row;
+}
+#principal, #secundario, #lateral {
+  display: table-cell;
+}
+#principal {
+width: 60%;
+}
+#secundario, #lateral {
+    width: 20%;
+}  
+
+/* float, left, rigt, none, Especifica si una caja debe o no flotar. */
+/* mueve la imagen lo mas que puede hacia la derecha, tener en cuenta que esto se hace flotante es algo parecido a absolute y las cosas como parrafos tratan de acomodarse por el otro lado tambien para que las cosas no se acomoden y sigan estando abajo las cosas que estan alrededor del elemento flotante  para que estas sigan abajo se usa clear, none es el que viene  por defecto pero si se le quiere quitar a algo la propiedad flotante se usa none.*/
+.float-left-prueba{
+    float: right;
+
+}
+
+/* los flotantes no se que les pasa pero como que son quisquiñosos y no toman su espacio en la caja donde estan, por eso uso overflow auto para que el background tomo su tamaño */
+.body-flo{
+    background-color: aqua;
+    overflow: auto;
+    clear: both;
+}
+.flo-l{
+  
+    float: left;
+}
+.flo-r{
+    float: right;
+}
+
+/* left
+Indica el desplazamiento entre el borde izquierdo del elemento y la parte izquierda de su elemento contenedor, solo afecta a los que tengan relative, absolute o fixed
+*/
+.left-p{
+    position: relative;
+    border:solid 3px #C00;
+    display: inline;
+    left: 50px;
+}
+
+/* overflow
+Controla el comportamiento de los contenidos que no caben en su elemento contenedor
+visible, hidden, scroll, auto */
+/* por deefecto es visible, es decir que  a pesar que el contenido se salga de la caja este se sigue viendo */
+.cuerpo-over{
+    border: solid blue 3px;
+    width: 40%;
+    height: 100px;
+    overflow: visible;
+}
+/*o- hidden hace que se oculte el contenido que sobre pasa la caja */
+.cuerpo-over-two{
+    margin-top: 30px;
+    border: solid blue 3px;
+    width: 40%;
+    height: 100px;
+    overflow: hidden;
+}
+
+/*o- scroll hace que si el contenido sobre pasa el tamaño a esta caja le salgan barras para hacer escroll y poder ver rodo su contenido en su cuerpo, pero salen las barras tanto vertical como hotizontal a si no sobresalga el contenido de algun lado  */
+
+.cuerpo-over-three{
+    margin-top: 30px;
+    border: solid blue 3px;
+    width: 40%;
+    height: 80px;
+    overflow: scroll;
+}
+
+/*o- auto, es el preferido ya que en caso que el contenido sobre salga este mostrara las barras, y solo en el lado que se sobre salga ohorizontal o vertical o ambas siendo el caso */
+.cuerpo-over-four{
+    margin-top: 30px;
+    border: solid blue 3px;
+    width: 40%;
+    height: 80px;
+    overflow: auto;
+}
+/* position
+Especifica el tipo de método de posicionamiento utilizado para un elemento, Alguno o todos los siguientes valores y en cualquier orden: (static, relative, absolute or fixed) 
+*/
+/*po stactic es el que viene por defecto, pero no funcionan el rigt, top, left y bottom */
+.posi-esta{
+    position: static;
+}
+/* po -relativo, es parecido al stactic pero si gunciona el rigt, top, left y bottom, pero se superponen en los elementos acyacentes */
+.posi-rela{
+    position: relative;
+    left: 20px;
+}
+
+/*po-absolute este se vuelve algo que var por encima de todo como si el fuera el unico ignora todos sus acyacentes */
+.posi-abso{
+    position: absolute;
+    border:solid  #C00 5px;
+    left: 50%;
+}
+/*po-fixed este es como absolute pero se vuelve fijo en la pantalla y asi se haga scroll estara en la misma posición todo el tiempo es absolute como aca funciona el rigt, top, left y bottom */
+.posi-fixe{
+    top: 20%;
+    left: 20%;
+    /* position: fixed; */
+    border:solid  rgb(80, 243, 16) 20px;
+}
+
+/* right
+	Indica el desplazamiento entre el borde derecho del elemento y la parte derecha de su elemento contenedor, solo afecta a todos los que tienen posición execto el static
+*/
+.right-po{
+    position: relative;
+    right: -30px;
+}
+
+/* top
+Indica el desplazamiento entre el borde superior del elemento y la parte superior de su elemento contenedor
+ */
+.body-img{
+    border:solid #C00 3px;
+}
+.po-top{
+    position: relative;
+    top: 20px; 
+}
+ /* visibility, 	Permite hacer visibles o invisibles las cajas de los elementos ,es decir, siguen estando hay pero de manera invisible, valores visible, hidden, collapse
+ por defecto es visibility que hace que se vea todo normal
+ */
+ /*hidden, el esapcio donde va la imagen sigue hay, pero la imagen desaparece */
+.visi-dos{
+    visibility: hidden;
+}
+
+/* creo que hace un efecto parecido a hidden */
+.visi-tres{
+    visibility: collapse;
+}
+
+
+ /* z-index 
+Establece el orden de apilamiento del elemento posicionado. puede ser auto o algun numero, no puede ser estatic no se por que pero no agarra, el que tenga el mayor numero es el que se ve primero, auto creo que coloca el ultimo elemento de ultimo.
+*/
+.z-uno{
+    z-index: 1;
+    border: solid rgb(0, 174, 255) 4px;
+    position: relative;
+    left: 40px;
+}
+.z-dos{
+    z-index: 2;
+    border: solid red 4px;
+    position: relative;
+    /* left: 20px; */
+}

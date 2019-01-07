@@ -1,0 +1,124 @@
+/* border 
+Establece todos los bordes en una sola declaración. 
+Alguno o todos los siguientes valores y en cualquier orden:anchura Estilo de borde,color
+*/
+
+/* estilo del borde
+Valor	Descripción
+none	No se muestra ningún borde. Como se trata del valor por defecto de cada uno de los bordes, ningún elemento muestra un borde a menos que se establezca de forma explícita
+hidden	Visualmente es idéntico a none, ya que provoca que no se muestre ningún borde. Su única diferencia es la forma en la que el navegador resuelve los conflictos entre bordes adyacentes de las celdas de las tablas
+dotted	Borde punteado, formado por una serie de puntos separados por espacios
+dashed	Borde discontinuo, formado por una serie de pequeños trazos intercalados por espacios
+solid	Borde continuo, formado por una línea recta continua
+double	Borde doble, formado por dos líneas rectas continuas separadas entre sí por un espacio en blanco
+groove	Borde hundido, que visualmente parece que se encuentra por debajo del nivel de la superficie de la pantalla
+ridge	Borde saliente, que visualmente parece que se encuentra por encima del nivel de la superficie de la pantalla
+inset	Borde hundido, que provoca que el elemento que encierra parezca que se encuentra por debajo del nivel de la superficie de la pantalla
+outset	Borde saliente, que provoca que el elemento que encierra parezca que se encuentra por encima del nivel de la superficie de la pantalla
+*/
+
+/* con esta propiedad se pueden colocar asta 12 propiedades a la ves en los 4 lados, es una ventaja pero desventaja a la misma ves ya que se puede colocar el color grosor y estilo a la ves en los 4 lados, pero si se desea colocar un estilo especial por ejemplo en un solo lado tocaria hacer por aparte con otra de las propiedades de borde */
+.border{
+    border: solid 4px red;
+    
+}
+
+/* en si el borde se divide en tres partes stylo, color, y grosor cada uno de ellos puede ser llamado de forma individual para ser mas exacto y tambien se puede ser aun mas axacto llamando por ejemplo el estilo en algun lado por ejemplo border-style-top: que significa el estilo del borde de arrriba*/
+
+/* border: Establece todos los bordes en una sola declaración. 
+border-bottom: Establece todos los bordes inferiores en una declaración. 
+border-bottom-color:
+Establece el color de los bordes inferiores. 
+border-bottom-style:
+Establece el estilo de los bordes inferiores. 
+border-bottom-width:
+Establece el ancho de los bordes inferiores. 
+border-color: Establece el color de los cuatro bordes. 
+border-left: Establece todas las propiedades de los bordes izquierdos en una sola
+declaración.
+
+border-left-color: Establece el color del borde izquierdo. 
+border-left-style: Establece el estilo del borde izquierdo. 
+border-left-width: Establece el ancho del borde izquierdo. 
+border-right: Establece todas las propiedades de los bordes derechos en una sola
+declaración.
+
+border-right-color:
+Establece el color del borde derecho. 
+border-right-style:
+Establece el estilo del borde derecho. 
+border-rightwidth:
+Establece el ancho del borde derecho. 
+border-style: Establece el estilo de los cuatro bordes. 
+border-top: Establece todas las propiedades de los bordes superiores en una sola 1
+
+border-top-color: Establece el color del borde superior. 
+border-top-style: Establece el estilo del borde superior. 
+border-top-width: Establece el ancho del borde superior. 
+border-width: Establece el ancho de los cuatro bordes.  */
+
+/* outline */
+/* Establece todas las propiedades de contorno en una sola declaración.  Alguno o todos los siguientes valores y en cualquier orden:Color de perfil, Estilo de perfil, Anchura de perfil*/
+
+/* lo que hace es que el borde se crea por fuera resptando completamente el tamaño del parrafo y no es rectangular  */
+.outline{
+    outline: solid 4px red;
+    display: inline;
+}
+
+/* en color puede establecer cualquier color y tiene una vaina que se llama invert que le da un color que resalte con el fondo es decir le da el color contrario, pero se le puede dar cualuier color, style son los estilos como el borde al igual que el width*/
+.outline-color{
+    outline-color: invert;
+    outline-style: double;
+    outline-width: 4px;
+}
+
+/* border-radius, asi modeleo todos lados de la misma forma y así
+border-top-left-radius: Esquina de arriba a la izquierda.
+border-top-right-radius: Esquina de arriba a la derecha.
+border-bottom-right-radius: Esquina de abajo a la derecha.
+border-bottom-left-radius: Esquina de abajo a la izquierda.
+
+con esto se pueden hacer muchas figuras también como el ojo que sale más abajo
+*/
+.border-radius{
+    border:solid 4px #3d9970;
+    /* display: inline; */
+    border-radius:15px;
+}
+
+/* .ojo { height: 13em; width: 13em; margin: auto; background: #dddddd; transform: rotate(45deg); border-radius: 95% 0; position: relative; } .ojo:before { content: ''; display: block; background: #3d9970; width: 7em; height: 7em; position: absolute; transform: translate(3em, 3em); border-radius: 50%; } .ojo:after { content: ''; display: block; background: #222; width: 3.5em; height: 3.5em; position: absolute; transform: translate(4.75em, 4.75em); border-radius: 50%; }  */
+
+/* border-image */
+/* Establece todos los bordes con imagen. se puede colocar todas sus propiedades en una solo linea o por separado
+esto es lo que trae por defecto o valor inicial
+ border-image-source: none: la ruta
+
+border-image-slice: 100%: dice como se va a recortar la imagen, se le pueden dar distintos valores en los 4 lados, se puede usar fill que hace que no se recorte la imagen
+
+border-image-width: 1, oj con esto, es el tamaño del borde pero si se le coloca un tamaño muy grande se come el contenido y queda como de fondo ya que el borde no va hacia afuera si no hacia adentro.
+
+border-image-outset: 0, es para decirle cuando quiero que salga el borde de la caja original, es decir, que sobre salga. se le puede dar un valor a todo o especificar un valor para cada lado.
+
+border-image-repeat: stretch:la imagen se estrira para rellenar, repeat:la imagen se repite asta llenar todo, round: la imagen se distribulle asta llenar todo en repiticiones y si dejar espacios, space: la imagen se distribuye asta llenar todo pero dejando espacios, ojo se pueden convinar */
+.borde-img{ 
+    border: solid 10px transparent;
+    /* border-image: 30 30 repeat; */
+    border-image-source: url("img/cristiano-ronaldo-juventus-2018-19_y5hyk3lnsydm12d4nw1a2k9uk.jpg");
+    border-image-slice: 50 100 200 100; 
+    border-image-width: 15px;
+    border-image-outset: 1;
+    border-image-repeat: round; 
+}
+
+/* box-shadow: 
+la sintaxis seria box-shadow: medida medida medida medida color, siendo las dos primeras horizontal y verticales obleigatorias es para decirles que tan a la derecha o que tan abajo este la sombra depende si el numero es negativo o positivo, Ala tercera es para ver que tan borrosa se ve y es opcional, y la cuarta es para decirle se se eapnade hacia afuera si el valor es positivo si es negativo se expande hachia adentro
+*/
+.box-sha{
+    margin-top: 100px;
+    /* border:solid 20px blue; */
+    box-shadow: 0px 0px 20px 5px blue;
+    /* box-decoration-break: clone; */
+}
+
+ /* box-decoration-break no entiendo bien para que es, pero tiene algo que ver con los bordes */
