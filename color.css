@@ -1,0 +1,47 @@
+/* Propiedades de Color  */
+/* color-profile
+ Permite la especificación de una fuente de colores diferente a la por defecto. es el color normal para los textos  */
+.color-uno{
+    /* Valores de palabras clave */ 
+    color: currentcolor;
+}  
+.color-dos{
+    /* Valores <named-color> nombre en ingles */
+    color: red;
+} 
+.color-tres{  
+    /* Valores <hex-color> hexadecimar*/  
+    color: #090;  
+}   
+.color-cuatro{
+    /* Valores <rgb()> */
+    color: rgb(34, 12, 64, 0.6);
+} 
+.color-cinco{ 
+    /* Valores <hsl()> */
+    color: hsl(30, 100%, 50%, 0.6);
+} 
+
+/* opacity 
+Establece el nivel de opacidad del elemento. el 0 es ya transparente 1 es solido pero si se varia se pueden dar efectos buenos*/
+
+.opa{
+    opacity: 0.5;
+}
+
+/* rendering-intent 
+Permite la especificación del perfil de color en vez del por defecto. 
+valores: auto | perceptual | relative-colorimetric | saturation | absolute-colorimetric | inherit, pero al parecer hay muchos navegadores que no lo soportan */
+
+.rendering-uno{
+    rendering-intent: perceptual; 
+}
+.rendering-dos{
+    rendering-intent: relative-colorimetri; 
+}
+.rendering-tres{
+    rendering-intent: absolute-colorimetric; 
+}
+.rendering-cuatro{
+    rendering-intent: saturation; 
+}

@@ -1,0 +1,43 @@
+/*Especifica si se debe cortar el borde  del contenido, si este se
+expande más que el elemento contenedor 
+overflow-x y "y" tienen las mismas propiedades que overflow solo que esta es mas especifica x para el overfloe horizontal y para el overflow vertical sus valores son losmismos visible: para que se vea la parte que sobresale, hidden para ocultar, scroll para que salga la barra de scroll y auto para que en caso de que sobre salga algo este muestre la barra en caso contrario no muestre nada, es la m'as usada*/
+.overf-x{
+    width: 300px;
+    height: 100px;
+    overflow-x: scroll;
+}
+.overf-y{
+    width: 300px;
+    height: 100px;
+    overflow-y: hidden;
+}
+
+/* overflow-style
+Especifica el método de scroll preferido para elementos que se desbordan. 
+esta propieda, esta prpiedad todavía no la tienen los navegadores
+*/
+
+.overf-sty{
+    width: 300px;
+    height: 100px;
+    overflow:auto;
+    -ms-overflow-style:marquee; 
+}
+
+/* rotation
+Rota un elemento a un punto definido por la propiedad rotation-point.
+es una prpiedad de transform, rota una imagen 
+*/
+.imag{
+    transform: rotate(45deg)
+}
+
+/* rotation-point
+Define un punto como un desplazamiento de la esquina del borde superior izquierdo. 
+pero en realidad se llama  transform-origin, es para decirle el origen o desde que lugar quiero que me haga la rotación
+*/
+.imgg-dos{
+    transform: rotate(45deg);
+    transform-origin: top right;
+    transform-style: preserve-3D;
+}
