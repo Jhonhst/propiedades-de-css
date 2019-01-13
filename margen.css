@@ -1,0 +1,26 @@
+/* margin 
+Establece todas las propiedades de margen en una declaración. es la distancia entre el borde y el cuerpo del elemento esta propiedad es de tipo shorthand */
+
+/* margin:10px le da un margen de 10px en todas las direcciones */
+/* margin: 10px 20px; es un margen de 10px verticales y 20 horizontales */
+/* margin: 10px 20px 5px; es un margen superior luego horizontal y por ultimo inferior
+ */
+ /* margin: 10px 20px 30px 50px; es un margen por los cuatro lados pero de forma individual */
+
+ .margen{
+     border: solid 3px green;
+     margin: 10px 50px 50px 20px;
+ }
+
+ /* tambien se pueden colocar de forma indeividual y se pueden colocar las distintas medidas, esto puede presentar sierta inferencia con los elementos con posicionamineto absoluto y float
+ 
+     margin-left: 0%;
+     margin-right: 0%;
+     margin-top: 0%;
+     margin-bottom: 0%;
+
+margin-bottom Establece el margen inferior de un elemento. 
+margin-left Establece el margen izquierdo de un elemento. 
+margin-right Establece el margen derecho de un elemento. 
+margin-top Establece el margen superior de un elemento. 
+     */

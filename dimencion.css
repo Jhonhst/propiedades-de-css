@@ -1,0 +1,42 @@
+/* ni width ni height aceptan valores negativos */
+/* height 
+Establece el alto de un elemento.valores unidad de medida | porcentaje | auto | inherit
+Se aplica a	Todos los elementos, salvo los elementos en línea que no sean imágenes, las columnas de tabla y los grupos de columnas de tabla, tener en cuenta que cuando se usan porcentajes, si se va usar porcentajes en algo se debe tener en cuenta al elemento padre para que el pueda calcular si no tiene nada que calcular pues ignora ese porcentage y coloca auto por defecto */
+.height{
+    height:20px;
+}
+
+/* max-height 
+Establece la máxima altura de un elemento.  es para establecer la altura maxima de un elemento*/
+
+.mx-height{
+    max-height: 40px;
+}
+
+/* min-height 
+Establece la mínima altura de un elemento, de esta manera obligo al alemento a que tenga una altura minima */
+
+.mn-height{
+    min-height: 400px;
+}
+
+/* width 
+Establece el ancho de un elemento Uno y sólo uno de los siguientes valores: medida
+porcentaje, auto. al iglual que height no funcionan en elmenton es linea como por ejemplo un ancla, tanto en height como width si usa la medida em tomo como teferencuia el tamaño de la letra que esta un su contenedor, si la letra es más pequeña entonces el tamaño sera pequeño y si la letra es grande la medida em toma una referencia mas granda depende del font-size y tambien toma los padding y bordes como todo eso es parte del contenedor agranda junto con eso*/
+.width{
+    width: 50%;
+}
+
+/* max-width 
+Establece el máximo ancho de un elemento, esto normamlemte es muy usado en el tamaño maximo de una pagina web como tal */
+
+.mx-width{
+    max-width: 40%;
+}
+
+/* min-width 
+Establece el mínimo ancho de un elemento  */
+
+.mi-width{
+    min-width: 120%;
+}

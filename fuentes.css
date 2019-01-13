@@ -1,0 +1,219 @@
+/* font 
+Establece todas las propiedades de fuente en una sola declaración.  
+La explicación de los valores permitidos para esta propiedad es muy compleja debido a su gran flexibilidad. Existen tres opciones diferentes para establecer el valor o valores de esta propiedad:
+Opcionalmente, uno, dos o tres de los siguientes valores y en cualquier orden:
+font-stylefont-variantfont-weight
+Seguido por:
+Obligatoriamente por el tamaño de letra (font-size)
+Opcionalmente por el interlineado (line-height)
+Obligatoriamente por el tipo de letra (font-family)
+al colocar todas las propiedades en una prpiedad de tipo shorthand como margin osea que se pueden colocar varios valores de ditintos tipos en la misma linea hace que se vea mas conocimientos
+*/
+.font{
+    font: 2em  Arial, Helvetica, sans-serif;
+}
+/* 
+font: 1.5em;             // Incorrecto: falta el tipo de letra
+font: sans-serif;        // Incorrecto: falta el tamaño de letra
+font: sans-serif 1.5em;  // Incorrecto: primero se indica el tamaño 
+deber ir el tamaño y el tipo de letra obligatorio
+*/
+
+/* font-family
+ Especifica la familia de fuente del texto. cuando el nombre de una fuente es solo una palabra no hay casi problema pero si el nombre de la fuente incluye espacion  o guiones se recomienda colocarlos entre comillas simples o dobles, es bueno colocar varios tipos de fuente debido a que la fuente que se mostrara depende si el usario tiene instalada ese tipo de fuente en su dispositivo entonces se colocan varios tipos porciacaso si la primera no funciona sigue a la que sigue y asi sucesivamente, pero tambien esta la opción de la importaciones de fuentes que más adelante las veremos  
+
+ estas son palabras claves que siempre es bueno colocarlas al final del nombre de las fuentes que traen varias fuentes en su interior con siertas convianciones que el navegador puede interpretar de forma muy similar en distintos dispositivos
+serif:	Times New Roman, Times, Garamond, Georgia, Cambria
+sans-serif:	Arial, Helvetica, Verdana, Trebuchet, Tahoma, Futura
+cursive:	Comic Sans
+fantasy:	Comic Sans, Impact
+monospace:	Courier New, Monaco, Consolas
+ */ 
+.font-fa{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* font-size 
+Especifica el tamaño de fuente del texto.valores
+absolute-size, relative-size, medida, porcentaje, inherit, algunas medidas em, ex, px, %, in, cm, mm, pt, pc, tambien se puede usr palabras clave como small o large pero lo mejor es usar em  */
+
+.font-si{
+     font-size: 2.4em;
+}
+
+/* font-style
+ Especifica el estilo de fuente del texto.  Uno y sólo uno de los siguientes valores:
+normal,italic,oblique */
+
+/* esta es para inclinar las letras y darle un estilo cursivo */
+.font-sty-uno{
+    font-style: italic;
+}
+/* este es el normal el por defecto */
+.font-sty-dos{
+    font-style: normal;
+}
+/* este es parecido al italic pero en realidad es la misma normal pero inclinada, desafortunadamenete la italic no es muy convertible por los navegadores y casi siempre vemos es oblique a pesar de ser la italic */
+.font-sty-tres{
+    font-style: oblique;
+}
+/* .font-sty-cuatro{
+    font-style: oblique;
+} */
+
+
+/* font-variant
+ Especifica si el texto debe mostrarse en minúscula. Uno y sólo uno de los siguientes valores: normal small-caps inherit, pues lo unico que veo es que coloca todo en mayuscula en un estilo raro*/
+
+ .font-varian{
+     font-variant: small-caps;
+ }
+
+ /* font-weight
+  Especifica el peso (grosor) de la fuente. Uno y sólo uno de los siguientes valores:
+normal,bold, bolder, lighter100,200,300,400,500,600,700,800,900 inherit tener en cuenta que toma como referencia el grosor padre para colocar mas gruesa o fina la letra, debido a que todavía los navegadores no estan muy acostumbrados a los distintos valores del weight casi siempre se una bold y normal
+
+no hay diferencias, la unica diferencia es bold y normal
+*/
+.font-we-uno{
+  font-weight: 100;
+}
+.font-we-dos{
+    font-weight: 200;
+}
+.font-we-tres{
+    font-weight: 300;
+}
+.font-we-cuatro{
+    font-weight: 400;
+}
+.font-we-cinco{
+    font-weight: 500;
+}
+.font-we-seis{
+    font-weight: 600;
+}
+.font-we-siete{
+    font-weight: 700;
+}
+.font-we-ocho{
+    font-weight: 800;
+}
+.font-we-nueve{
+    font-weight: 900;
+}
+.font-we-diez{
+  font-weight: bold;
+}
+.font-we-once{
+    font-weight:bolder;
+}
+.font-we-doce{
+    font-weight: lighter;
+}
+
+/* font-size-adjust 
+Preserva la legibilidad del texto en caso de errores. esto es para que tome por referencia el tamaño en minuscula, no entiendo muy bien su uso */
+.font-si-ad{
+    font: 12px Verdana, sans-serif;
+    font-size-adjust: 0.58;
+}
+
+/* font-stretch
+ Selecciona una fuente normas, condensada o expandida de una familia de fuentes. se puede medir en porcentajes o con sus palabras clave, tambien depende del tipo de fuente ya que esta debe permitir a esta propiedad usar sus valores, pero esto es para expandir las letras */
+
+@font-face {
+    src: url('https://mdn.mozillademos.org/files/16014/LeagueMonoVariable.ttf');
+    font-family:'LeagueMonoVariable';
+    font-style: normal;
+}
+.font-str{
+    border: 10px solid #f5f9fa;
+    padding: 0 1rem;
+    font: 1.5rem 'LeagueMonoVariable', sans-serif;
+}
+.uno{
+  font-stretch: ultra-condensed;
+}
+.dos{
+    font-stretch: extra-condensed; 
+}
+.tres{
+    font-stretch: condensed;
+}
+.cuatro{
+    font-stretch: semi-condensed;
+}
+.cinco{ 
+    font-stretch: normal;
+}
+.seis{
+    font-stretch: semi-expanded;
+}
+.siete{
+    font-stretch: expanded;
+}
+.ocho{ 
+    font-stretch: extra-expanded;
+}
+.nueve{
+    font-stretch: ultra-expanded;
+}
+.diez{ 
+    font-stretch: 50%;
+}
+.once{ 
+    font-stretch: 60%;
+}
+.doce{
+    font-stretch: 100%;
+}
+.trece{
+    font-stretch: 130%;
+}
+.catorce{
+    font-stretch: 150%;
+}
+.quince{
+    font-stretch: 200%;
+}
+
+/* @font-face Es una regla que permite descargar fuentes de sitios web, diferentes a los estilos de fuente utilizados generalmente. esto permite crear fuentes por así decirlo, en la url es bueno colocar la fuente en distintos formatos por ciacaso el navegador no  los acepta WOFF es el formato utilizado por casi todos los navegadores. 
+es bueno tambien colocar en ves de url colocar local para ver si la fuente esta dentro del dispositivo y evitar usar el ancho de banda pero en caso contrario que busque la url, en el font-face se le puede dar distinatas propiedaades para que al ser llamada ya venga con todo eso  */ 
+
+/* unicode-range es para decirle que tipo o rango de letras debe traer, depende del idioma si para el ingles o para el español japones checo ecxetera como los distintos idiomas usan distintas letras esos codigos se encargan de traer esas letras en ese idioma */
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v11/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+    font-family: 'Raleway-dos';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Raleway Italic'), local('Raleway-Italic'), url(https://fonts.gstatic.com/s/raleway/v11/IIm-lPOtfVKQy0GMiczF_1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+    font-family: 'Bungee Inline';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bungee Inline'), local('BungeeInline-Regular'), url(https://fonts.gstatic.com/s/bungeeinline/v2/Tb-1914q4rFpjT-F66PLCTxObtw73-qQgbr7Be51v5c.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.fontface-uno{
+     font-family: 'Raleway';
+}
+
+.fontface-dos{
+    font-family: 'Raleway-dos';
+}
+
+.fontface-tres{
+    font-family: 'Bungee Inline';
+}

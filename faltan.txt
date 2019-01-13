@@ -1,0 +1,5 @@
+propiedades flexibles de caja
+propiedades de contenido generado
+propiedades de caja en linea
+propiedades de ruby
+propiedades de discurso
