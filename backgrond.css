@@ -37,7 +37,7 @@ Actúa como heredado o inicial. Actuará como heredado si el padre tiene un valo
 
 
 
-/* al .background solo se le puede dar despues sus diferentes propiedades en modo valor de la propiedad es para colocar fondos, se le pueden colocar toas las propiedades del background en una solo linea si se desea*/
+/* al .background solo se le puede dar despues sus diferentes propiedades en modo valor de la propiedad es para colocar fondos, se le pueden colocar todas las propiedades del background en una solo linea si se desea*/
 .background{
     background: darkturquoise;
     color: brown;

@@ -1,0 +1,9 @@
+/* direction 	
+Indica la dirección en la que se muestra el texto y su valor también lo utilizan otras propiedades CSS, muestra las cosas de un lado o del otro ltr es el que viene por defecto de izquierda a derecha pero rtl los muestra de derecha a izquierda */
+.direcction{
+    direction: ltr;
+}
+
+.direcction-dos{
+    direction: rtl;
+}

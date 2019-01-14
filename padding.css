@@ -1,4 +1,16 @@
 /* padding 
 Establece todos los espacios Propiedades en una declaración. este espacio va entre el margen y el cuerpo del elemento este señor puede agrandar mas a un elemento pero de manera invisible por asi decirlo 
-	Establece la anchura de algunas o todas las zonas de relleno de los elementos
+Establece la anchura de algunas o todas las zonas de relleno de los elementos
+
+tiene las mismas reglas de margin en oreden de los valores
 */
+
+.padding{
+    padding: 10px 20px 30px 40px;
+    border: solid 5px blue;
+}
+/* 
+padding-bottom Establece el espaciado inferior de un elemento. 
+padding-left Establece el espacio izquierdo de un elemento. 
+padding-right Establece el espacio derecho de un elemento. 
+padding-top Establece el espaciado superior de un elemento.  tiene las mismas reglas de margin leerlas porciacaso*/
