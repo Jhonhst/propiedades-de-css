@@ -7,3 +7,28 @@ Indica la dirección en la que se muestra el texto y su valor también lo utiliz
 .direcction-dos{
     direction: rtl;
 }
+
+/* word-spacing
+Establece la separación entre las palabras del texto Uno y sólo uno de los siguientes valores: normal medida inherit, esto es para la separación entre palabras*/
+.word-spacing{
+  word-spacing: 15px;
+}
+
+/* line-height 
+Establece el interlineado del texto Uno y sólo uno de los siguientes valores:
+normal número medida porcentaje inherit, es para contralas el tamaño entre lineas, cada linea tiene como una especie de padding pero en realidad es el tamaño de esta y es con line-height que se controla, se recomienda usar numeros*/
+.line-height{
+   line-height: 2;
+} 
+
+/* text-align
+Establece la alineación del contenido de un elemento de bloque, La propiedad text-align define cuatro valores para alinear los contenidos a la izquierda (left), a la derecha (right), centrados (center) o justificados (justify), tener en cuenta que esto tambien sirve para imagenes no se bien como se haria,  la propiedad text-align no alinea un elemento sino sus contenidos
+*/
+
+.text-align{
+    text-align: center;
+}
+/* si centra las imagenes pero estas tienen que estar dentro de algo ya que no alinea a un conenido si no a los hijos de dicho bloque */
+.imag{
+    text-align: center;
+}
