@@ -32,3 +32,360 @@ Establece la alineación del contenido de un elemento de bloque, La propiedad te
 .imag{
     text-align: center;
 }
+
+/* text-decoration
+    Establece la decoración que se añade al texto de un elemento El valor none
+Uno o más de los siguientes valores y en cualquier orden: underline overline line-through blink, temer en cuenta que el borde inferior es parecido a border-bottom pero la diferencia es que la linea del borde cubre por debajo del texto es decir la caja mientras que esta esta justo debajo del texto
+ */
+
+ /* underline: se muestran subrayadas todas las líneas de texto. */
+.text-deco{
+   text-decoration: underline;
+}
+
+/*overline similar al valor underline, pero en este caso el subrayado se muestra en la parte superior de cada línea. */
+.text-deco-one{
+    text-decoration: overline;
+ }
+
+
+ /* line-through: todas las líneas de texto se muestran tachadas mediante una línea continua en el medio de cada línea. */
+ .text-deco-two{
+    text-decoration: line-through;
+ }
+
+ /* blink: el texto parpadea apareciendo y desapareciendo de forma alternativa. al parecer los navegadores no la usan*/
+ .text-deco-three{
+    text-decoration: blink;
+ }
+
+ /* none: el texto no muestra ninguna decoración, por lo que se eliminan todas las decoraciones que puede haber heredado el elemento. */
+
+ .text-deco-four{
+    text-decoration: none;
+ }
+
+ /* text-indent
+ Establece la tabulación o indentación de la primera línea del texto de un elemento
+ acepta medidas y porcentanjes, esto es para la sangria*/
+
+ .text-indent{
+     text-indent: 20px;
+ }
+
+ /* text-transform
+ Transforma el texto de un elemento para mostrarlo en mayúsculas, minúsculas o una mezcla de ambas
+ Uno y sólo uno de los siguientes valores: capitalize uppercase lowercase none
+ */
+ /* lowercase: muestra todo el texto del elemento con letras minúsculas. */
+ .text-transform-one{
+     text-transform: lowercase;
+ }
+ /* uppercase: muestra todo el texto del elemento con letras mayúsculas. */
+ .text-transform-two{
+    text-transform: uppercase;
+}
+
+/* capitalize: muestra la primera letra de cada palabra en mayúscula y el resto de letras en minúsculas. */
+.text-transform-three{
+    text-transform: capitalize;
+}
+.text-transform-four{
+    text-transform: none;
+}
+
+/* unicode-bidi 
+    Modifica el comportamiento del algoritmo utilizado para el texto Unicode bidireccional Alguno o todos los siguientes valores y en cualquier orden: normal embed bidi-override, va en conjunto con la propiedad direction y esto sirve para hacer convinaciones en los idiamas como español con arabe que uno va de izquierda a derecha y el otro de derecha a izquierda, hay que estudiarlos más en el momento que lo necesite */
+.unicode-one{
+    unicode-bidi: normal;
+    direction: rtl;
+}
+.unicode-two{
+    unicode-bidi: embed;
+    direction: rtl;
+}
+.unicode-three{
+    unicode-bidi: isolate;
+    direction: rtl;
+}
+.unicode-four{
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+.unicode-five{
+    unicode-bidi: plaintext;
+    direction: rtl;
+}
+
+/*vertical-align: La propiedad vertical-align de CSS especifica el alineado vertical de un elemento en línea o una celda de una tabla. Alguno o todos los siguientes valores y en cualquier orden:
+baseline sub super top text-top middle bottom text-bottom porcentaje medida sirve para alinear otros elemenotos como imagenes tambien
+La propiedad vertical-align es particularmente útil para alinear imágenes. Algunos ejemplos:
+
+IMG.middle { vertical-align: middle }
+IMG        { vertical-align: 50% }
+.exponente  { vertical-align: super }
+*/
+
+.padre-one{
+    height: 400px;
+    border: solid 5px red;
+    vertical-align: sub; 
+}
+
+/* Alinea la línea base del elemento con la línea base del padre. */
+.vertical-align-one{
+    vertical-align: baseline; 
+    border: 3px solid green;
+}
+
+/* Alinea la línea base del elemento con la línea subscript del elemento padre. no veo diferencia */
+.vertical-align-two{
+    vertical-align: sub; 
+    border: 3px solid green;
+}
+
+/* Alinea la línea base del elemento con la línea superscript del elemento padre. no veo diferencia */
+.vertical-align-three{
+    vertical-align: super; 
+    border: 3px solid green;
+}
+
+/* Alinee la parte superior del elemento y sus descendientes con la parte superior de toda la línea.  no veo diferencia*/
+.vertical-align-four{
+    vertical-align: top; 
+    border: 3px solid green;
+}
+
+/* Alinea la parte superior del elemento con la parte superior de la fuente del elemento principal. no veo diferencia */
+.vertical-align-five{
+    vertical-align: text-top;
+    border: 3px solid green;
+}
+
+/* Alinea la mitad del elemento con la mitad de las letras minúsculas en el padre. no veo la diferencia */
+.vertical-align-six{
+    vertical-align: middle;
+    border: 3px solid green;
+}
+
+/* Alinee la parte inferior del elemento y sus descendientes con la parte inferior de toda la línea. */
+.vertical-align-seven{
+    vertical-align: bottom;
+    border: 3px solid green;
+}
+
+/* Alinea la parte inferior del elemento con la parte inferior de la fuente del elemento principal. */
+.vertical-align-eight{
+    vertical-align: text-bottom;
+    border: 3px solid green;
+}
+
+/* no veo diferencia en % */
+.vertical-align-nine{
+    vertical-align: 90%;
+    border: 3px solid green;
+}
+
+/* no veo diferencia en px */
+.vertical-align-ten{
+    vertical-align: 90px;
+    border: 3px solid green;
+}
+
+/* no se como es esto */
+.img-vertical{
+    vertical-align: bottom;
+    border: 3px solid green;
+}
+
+
+/* white-space 
+La propiedad white-space de CSS, determina cómo se maneja el espacio en blanco dentro de un elemento. Para hacer que las palabras se dividan en sí mismas, usa overflow-wrap, word-break, o hyphens en su lugar.
+white-space: normal;
+white-space: nowrap;
+white-space: pre;
+white-space: pre-wrap;
+white-space: pre-line;
+
+*/
+
+.padre-two{
+    height: 400px;
+    border: solid 5px blue;
+}
+
+/* normal */
+/* Se colapsan las secuencias de espacios en blanco. Los caracteres de nueva línea en la fuente se manejan de la misma manera que otros espacios en blanco. Las líneas se rompen según sea necesario para rellenar los cuadros de línea. */
+
+.white-space-one{
+    white-space: normal;
+}
+
+/* nowrap */
+/* Contrae los espacios en blanco como para normal, pero suprime los saltos de línea (ajuste de texto) dentro de la fuente. hace que siga la line y no salte */
+.white-space-two{
+    white-space: nowrap;
+}
+/* 
+pre
+Se conservan secuencias de espacios en blanco. Las líneas solo se dividen en caracteres de nueva línea en la fuente y en los <br>elementos. sigue en la misma linea no salta*/
+.white-space-three{
+    white-space: pre;
+}
+
+/* Se conservan secuencias de espacios en blanco. Las líneas se dividen en los caracteres de nueva línea, en <br>, y según sea necesario para rellenar los cuadros de línea. osea algo norml saltan de linea normal*/
+.white-space-four{
+    white-space: pre-wrap;
+}
+
+/* Se colapsan las secuencias de espacios en blanco. Las líneas se dividen en los caracteres de nueva línea, en <br>, y según sea necesario para rellenar los cuadros de línea. osea algo norml saltan de linea normal */
+.white-space-five{
+    white-space: pre-line;
+}
+
+
+/* word-spacing  Establece la separación entre las palabras del texto. Es para separar las palabras sus valores son normal o medida*/
+.word-spacing{
+    word-spacing:30px;
+}
+
+/* <!-- hanging-punctuation -->
+propiedad colgar-puntuacion especifica si una marca de puntuacion al principio o al final de una línea de texto fuera de la caja. pero no se no veo la fiferencia
+*/
+
+.puntuacion-one{
+    hanging-punctuation:first;
+    border: solid 5px yellow;
+}
+
+.puntuacion-two{
+    hanging-punctuation:last;
+    border: solid 5px yellow;
+}
+.puntuacion-three{
+    hanging-punctuation:allow-end;
+    border: solid 5px yellow;
+}
+
+.puntuacion-four{
+    hanging-punctuation:force-end;
+    border: solid 5px yellow;
+}
+
+.puntuacion-five{
+    hanging-punctuation:none;
+    border: solid 5px yellow;
+}
+
+
+
+
+
+/* atributo de puntuacion-ajuste especifica si la modificación, cuando aparece en otra línea, o adyacentes al principio o al final de puntuación caracteres de puntuación de caracteres de ancho */
+/* sintaxis pero no le veo utilidad */
+/* punctuation-trim: none|start|end|allow-end|adjacent; */
+
+
+
+/*text-align-last: La propiedad CSS text-align-last describe como estará alineada la última línea de un elemento en el caso de que la propiedad text-align esté definida como justify. Acepta los mismos valores que la propiedad text-align. */
+/* acepta auto|left|right|center|justify|start|end star y end es como izquierda o derecha*/
+.text-one{
+   text-align: justify;  
+   text-align-last: right; 
+}
+.text-two{
+    text-align: justify;
+    text-align-last: center;   
+ }
+ .text-three{
+    text-align: justify;  
+    text-align-last: left; 
+ }
+
+ /* text-justify
+ La propiedad de CSS de text-justify define qué tipo de justificación se debe aplicar al texto cuando está justificado (es decir, cuando text-align : justify; se establece en él). */
+/* 
+
+ none
+La justificación del texto está desactivada. Esto tiene el mismo efecto que no configurar text-align en absoluto, aunque es útil si necesita activar y desactivar la justificación por alguna razón.
+auto
+El navegador elige el mejor tipo de justificación para la situación actual basada en un equilibrio entre rendimiento y calidad, pero también en lo que es más apropiado para el idioma del texto (por ejemplo, inglés, idiomas CJK, etc.). Esta es la justificación predeterminada utilizada si text-justify no está configurado en absoluto.
+inter-word
+El texto se justifica al agregar espacio entre las palabras ( word-spacing varía de manera efectiva), que es más apropiado para los idiomas que separan palabras usando espacios, como inglés o coreano.
+inter-character
+El texto se justifica agregando espacio entre los caracteres ( letter-spacing varía efectivamente), que es más apropiado para idiomas como el japonés.
+distribute
+Exhibe el mismo comportamiento que inter-character ; este valor se mantiene por compatibilidad con versiones anteriores.
+Sintaxis formal
+auto | inter-character | inter-word | none */
+ 
+/* text-outline 
+ni idea que hace esta cosa
+*/
+.text-outline{
+    text-outline:2px 2px #ff0000;
+} 
+
+/* text-overflow
+La propiedad de CSS text-overflow determina como el contenido que se desborda y que no es mostrado, va a hacersele notar a los usuarios. Puede ser cortado, mostrar una elipsis ('…', U+2026 HORIZONTAL ELLIPSIS), o mostrar una cadena de texto personalizada.
+es para manejar el desbordainto de una linea de texto*/
+/* necesito esto para ver las diferencuas pero le da las pripiedades al reto de parrafos que he trabajado alla arriba
+p {
+    width: 200px;
+    border: 1px solid;
+    padding: 2px 5px;
+  
+    white-space: nowrap;
+    overflow: hidden;
+  } */
+.text-over-one{
+    text-overflow: clip;
+    border: solid 5px red;
+}
+/* este lo que hace es que le coloca los tres puntos al final de la linea y desaperece el resto */
+.text-over-two{
+    text-overflow: ellipsis;
+    border: solid 5px red;
+}
+/* no hace nada */
+.text-over-three{
+    text-overflow: "-";
+    border: solid 5px red;
+}
+/* no hace nada */
+.text-over-four{
+    text-overflow: "";
+    border: solid 5px red;
+}
+
+/* text-shadow */
+/*text-shadow La propiedad text-shadow agrega sombra al texto. Acepta una lista de sombras separadas por coma, para aplicarlas al texto y a la propiedad text-decorations del elemento. */
+.shadow{
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 2px black; 
+}
+
+/* text-wrap: los navegadores aun no la tomam en cuenta */
+/* gramática */
+/* text-wrap: normal|none|unrestricted|suppress; */
+
+/* word-break */
+/* La propiedad word-break de CSS define donde estarán permitidos los saltos de línea en una palabra. Permite saltos entre dos caracteres cualesquiera que sean o impedir saltos del línea del todo. no se no funciona*/
+.word-one{
+    word-break: break-all;
+    border: solid 5px red;
+}
+.word-two{
+    word-break: keep-all ;
+    border: solid 5px red;
+}
+
+/* word-wrap */
+/* propiedad word-wrap permite que el contenido larga puede envolver.
+valores word-wrap: normal|break-word; mmm tampoco hace nada
+ */
+.word-wrap{
+    word-wrap:break-word;
+    border: solid 5px red;
+
+}
