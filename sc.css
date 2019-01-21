@@ -1,0 +1,75 @@
+/* :root es como la etiqueta html pero mayor, tambien sirve para declarar variables */
+:root{
+    background-color: rgb(111, 211, 173);
+    --color:blue;
+}
+
+/* :active active es solo para cuando se le de click no queda activado despues que se le da click ademas que debe ir de ultimo de las otras pseudoclass es decir que si hay un hover o focus sobre este despues de active este se anula por tanto lo mejor es dejarlo de ultimo*/
+.activado{
+    text-decoration: none;
+    color: green;
+}
+/* lo que esta dentro de var es la variable que declare alla arriba en root */
+.activado:active{
+    color:var(--color);
+}
+
+/*fucus
+ normalmente se usa en los inputs cuando se le la click para escribir este se enfoca y ejecuta esta clase */
+.enfocado:focus{
+    background-color: blueviolet;
+}
+
+/* :hover esta se activa cuando se pasa por encima el raton sin la necesidad de darle click*/
+.hover{
+    text-decoration: none;
+}
+.hover:hover{
+    color: black;
+}
+
+/* :link :link Vínculo no visitado, es para los link que no se han visitado tener en cuenta que el usa para diferencia es el href
+*/
+.link{
+    text-decoration: none
+}
+
+.link:link{
+    color: rgb(99, 107, 224)
+}
+
+/* :visited Vínculo visitado  es para los link que ya se han visitado tener en cuenta que el usa para diferencia es el href*/
+.visitado:visited{
+    text-decoration: none;
+    color: yellow;
+}
+
+/* :first-child Elemento que es el primer hijo de otro elemento, seleciona el primer elemto de los hermanos */
+.fir:first-child{
+    background-color: #00ff00;
+}
+
+/* :lang Lenguage utilizado en un elemento, para esto se le especifica en el html la palabra lang, es para los idiomas*/
+:lang(en) > q { quotes: '\201C' '\201D' '\2018' '\2019'; }
+:lang(fr) > q { quotes: '« ' ' »'; }
+:lang(de) > q { quotes: '»' '«' '\2039' '\203A'}; 
+
+/* :first-letter La primera letra de un texto, no agarro */
+.fl::first-letter{
+     color: #00ff00;
+}
+/* :first-line La primera línea de un texto, la primera linea del parrafo */
+.fli::first-line{
+   color: aqua;
+}
+/* :before Contenido antes de un elemento, generealmente se usa con content para agregar contenido desde css y los estilos que se greagan los toma esa contenido que esta antes */
+.before::before{
+    background-color: red;
+    content: "<<<<<<"
+}
+
+/* :after Contenido después de un elemento es lo mismo que before pero su contenido va es despues del elemento selecionado */
+.before::after{
+    background-color: red;
+    content: ">>>>>>>"
+}
